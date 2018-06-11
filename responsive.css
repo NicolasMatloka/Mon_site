@@ -1,0 +1,110 @@
+/* 1 - pour les tablettes en mode portrait ou les ordinateurs avec une résolution horizontale de moins de 994px */
+@media screen and (max-width: 994px) {
+    #content {
+        width: 75%;
+    }
+
+    #nav, #sidebar {
+        width: 25%;
+    }
+
+    #sidebar .inner {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+
+
+ /* Un affichage intermédiaire - pour certaines tablettes en mode portrait 
+ ou des ordinateurs avec une résolution horizontale de moins de 700px */
+@media screen and (max-width: 700px) {
+    #content {
+        width: 100%;
+    }
+
+    /* Retirer la marge droite de main-content */
+    #content .inner {
+    margin-right: 0; 
+    }
+
+    /* Mettre le nav au-dessus du contenu principal */
+    #nav {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Placer le côté des éléments de nav à côte */
+    #nav li {
+        float: left;
+        width: 24%;
+        border-bottom: none;
+        border-right: 1px solid rgba(255,255,255,.5);
+    }
+
+    #nav li:last-child {
+        width: 27%;
+        border-right: none;
+    }
+
+    #nav a {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    /* Placer la barre latérale sous le contenu principal */
+    #sidebar {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+}
+
+
+/* 2 - pour les ordinateurs avec une résolution horizontale de moins 
+de 555px et la plupart des smartphones en mode paysage (480px de large) */
+@media screen and (max-width: 555px), screen and (max-device-width: 480px) { 
+    body {
+        margin: 0;
+    }
+
+    #header .inner {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #header .inner, #content, #nav, #sidebar {
+        margin-bottom: 5px;
+    }
+
+    #nav ul {
+        padding: 5px 7px;
+    }
+
+}
+
+ /* 3 - tous les autres appareils avec moins de 320px de large 
+ (principalement les smartphones en mode portrait) */
+@media screen and (max-width: 320px) { 
+
+    body {
+        margin: 0;
+        background: #acacac; 
+    }
+
+    #header .inner {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    #header .inner, #content, #nav, #sidebar {
+        margin-bottom: 5px;
+    }
+
+    #nav ul {
+        padding: 5px 7px;
+    }
+
+}
